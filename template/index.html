@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block banner %}
+<div id="banner-wrapper">
+  <div class="container">
+    <div id="banner">
+      <h2>{{ site.tagline }}</h2>
+      {% if site.subtagline %}
+      <span>{{ site.subtagline }}</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="main">
+  <div class="container">
+    <div class="row main-row">
+
+      <div class="4u">
+        <section>
+          <h2>About</h2>
+          {{ snippets|get:'gist'|markdown_to_html }}
+        </section>
+      </div>
+
+      <div class="4u">
+        <section>
+          <h2>Goals</h2>
+          <div class="goals">
+          {{ snippets|get:'goals'|markdown_to_html }}
+          </div>
+        </section>
+      </div>
+
+      <div class="4u">
+        <section>
+          <h2>Project Activity</h2>
+          <div id="project-activity"></div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="js/github.commits.widget.js"></script>
+<script>
+  $(function() {
+    $('#project-activity').githubInfoWidget({
+      user: 'gar1t',
+      repo: 'erlang-czmq',
+      branch: 'master'
+    });
+  });
+</script>
+{% endblock %}

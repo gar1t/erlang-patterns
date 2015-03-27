@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id="main">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+        <h2>{{ pattern.name }}</h2>
+        <p><strong>Scope:&ensp;</strong>{{ pattern.scope }}</p>
+        <p>{{ pattern.summary }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

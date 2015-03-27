@@ -1,0 +1,29 @@
+/*
+	Minimaxing by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+.button {
+	background-image: url('images/button.svg');
+}
+
+.button:hover {
+	background-image: url('images/button-hover.svg');
+}
+
+#header-wrapper {
+	background-image: url('images/header-wrapper.svg');
+}
+
+#header {
+	background-image: url('images/header.svg');
+}
+
+	#header nav a.current-page-item {
+		background-image: url('images/nav-a.svg');
+	}
+
+	#header nav a:hover {
+		background-image: url('images/nav-a-hover.svg');
+	}

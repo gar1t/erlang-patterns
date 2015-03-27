@@ -1,0 +1,2 @@
+gen:
+	cd ..; make gen
