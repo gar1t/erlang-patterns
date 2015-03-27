@@ -251,3 +251,12 @@ a.github-commit {
     text-decoration: none;
     line-height: 1.2em;
 }
+
+.pattern-row div {
+    line-height: 1.4em;
+}
+
+code {
+    font-family: monospace, Courier;
+    font-size: 80%;
+}

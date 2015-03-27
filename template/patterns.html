@@ -4,11 +4,16 @@
 
 <h1>The Patterns</h1>
 
-{% for p in patterns|sort:'name' %}
 <div class="row">
+  <div class="3u"><strong>Name</strong></div>
+  <div class="3u"><strong>Scope</strong></div>
+  <div class="6u"><strong>Summary</strong></div>
+</div>
+{% for p in patterns|sort:'name' %}
+<div class="row pattern-row">
   <div class="3u"><a href="{{p|basename}}.html">{{ p.name }}</a></div>
   <div class="3u">{{ p.scope }}</div>
-  <div class="6u">{{ p.summary }}</div>
+  <div class="6u">{{ p.summary|markdown_to_html }}</div>
 </div>
 {% endfor %}
 
