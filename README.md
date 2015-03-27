@@ -1,50 +1,69 @@
-Function
-Behavior (callbacks)
-Function types
-  Message handler
-  Process starter
-  Process initializer
-  Accumulator
-  Step processor
-  Step
-  Response handler
-  Type converter (shape converter)
-Process
-Process types
-  Service oriented process
-  Task oriented process
-  Finite state machine
-  Data server
-  Cleanup crew (higher level category/pattern)
-Supervisor
-Network processes
-  Socket listener
-  Connection handler
-Pool
-Pool types
-  Connection pool
-  Acceptor pool
-Data
-  IO List
-Ulf Patterns
-  Stats collector
-  Rate limiter
+# Erlang Patterns
 
-Principles:
-  Self advocacy
-  Single concern
-  Crah by default
-  One process per real work conccurent activity
+Please see [http://erlangpatterns.org](http://erlangpatterns.org) for
+the published site.
 
+The site content is generated using
+[Lambda Pad](http://lambdapad.io). See **Building** below for more
+information on building the site.
 
-Rules for defining a pattern:
-- Must solve an identifiable problem
-- Must be used
-- Should appear frequently
+## Contributing to the Patterns
 
-Methodology page
-Goals in an overview page (front)
+Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for the project
+contribution policy.
 
-Category: Each pattern has one category; category has an md file that describes it - this follows Alexander's structure
+If you want to add a pattern, simply add a file to the `patterns`
+directory that follows the conventions of the other pattern documents
+in that directory.
 
-Graph the relationships
+To modify a pattern, simply edit the applicable file.
+
+Please submit a pull request to the project to apply your changes.
+
+Currently erlangpatterns.org is updated manually by the project
+administrator using the master branch of this repository.
+
+If you'd like to ask a question or raise an issue about a pattern,
+please use the project's
+[issue tracking system](https://github.com/gar1t/erlang-patterns/issues).
+
+## Building
+
+You don't have to build the project to contribute, however you must
+build it to preview your changes within the context of the whole site.
+
+Use the instructions below to build the site using LambdaPad.
+
+### Install Lambda Pad
+
+You need to first install Lambda Pad.
+
+```
+git clone https://github.com/gar1t/lambdapad.git
+cd lambdapad
+make
+```
+
+Add the Lambda Pad `bin` directory to you path.
+
+### Clone Your Fork of the Project
+
+```
+git clone https://github.com/YOUR-FORK
+cd erlang-patterns
+make
+```
+
+## View the Presentation
+
+You can view the presentation by simply opening the file:
+
+`erlang-patterns/site/index.html`
+
+Or by running:
+
+```
+make serve
+```
+
+and opening [http://localhost:8000](http://localhost:8000)
