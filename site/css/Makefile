@@ -1,2 +1,0 @@
-gen:
-	cd ../..; make gen
