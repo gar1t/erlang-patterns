@@ -70,7 +70,7 @@ converting to a binary can be cheaper than copying the IO list many times, in
 garbage collection of a single process or in message passing to others.
 
 ```
-<<"Guten tag, Hello">> = ["Guten tag, ",<<"Hello">>].
+<<"Guten tag, Hello">> = iolist_to_binary(["Guten tag, ",<<"Hello">>]).
 ```
 
 In cases where the binary data is small, allocating IO lists can be greater than
