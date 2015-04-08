@@ -8,7 +8,9 @@
         <h2>{{ pattern.name }}</h2>
         <p><strong>Scope:&ensp;</strong>{{ pattern.scope }}</p>
         <p>{{ pattern.summary }}</p>
-        <div>{{ pattern|markdown_to_html }}</div>
+        <div class="real-lists">
+          {{ pattern|markdown_to_html }}
+        </div>
       </div>
     </div>
   </div>
