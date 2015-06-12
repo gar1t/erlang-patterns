@@ -1,0 +1,3 @@
+Name: Persistent Ephemeral State
+Scope: Anti Pattern
+Description: Use a process, not a db
