@@ -55,11 +55,15 @@ h4 {
 }
 
 p, ul {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.1em;
 }
 
 p {
-    line-height: 1.8em;
+    line-height: 1.5em;
+}
+
+pre {
+    margin-bottom: 1.1em;
 }
 
 strong {
