@@ -4,8 +4,8 @@
 
 - A pattern SHOULD be used and something you can observe.
 
-- Preferably, a pattern SHOULD be repeated and over enough time to
-  inform one's experience.
+- A pattern SHOULD be repeated and over enough time to inform one's
+  experience.
 
 - A pattern MUST feel good when used.
 
@@ -16,9 +16,10 @@
 Each pattern MUST define the following:
 
 - Name
-- Short summary of the pattern
-- Description of why the pattern is good
-- Description of where it should be used
+- Scope (see below)
+- One line summary of the pattern
+- Detailed description of the pattern including why the pattern is
+  good and where it should be used
 
 A pattern MAY additionally define:
 
