@@ -1,37 +1,18 @@
 Name:     Accumulator
 Scope:    Function Type
-Summary:  A recursive function can be used to build a list result by
-          appending to a working list head.
-Example implementation:
+Summary:  A recursive function can be used to build a list.
 
-<pre><code class="language-erlang">
-%% File: accumulator.erl %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--module(accumulator).
--export([sum/1, prod/1]).
+Creating a list is one of the more common functions in a program. The
+_accumulator_ pattern uses a recursive function to build a list by
+adding items to the head of a list. It's common to reverse the list as
+a final step in the process.
 
+Here's an example that creates a sequential list of integers.
 
-%% Using recursive function
-%% Example: Sum list of numbers
-%% Usage:
-%% MySum = accumulator:sum([2,4,6,8]).
-%% MySum is now 20
+```erlang
+{% example file="accumulator.erl" lines="5-10" %}
+```
 
-sum(List) ->
-    sum(List, 0). % Zero is the initial value for accumulator
-
-sum([Head|Tail], Acc) ->
-    sum(Tail, Head + Acc); % Next call receive accumulator plus Head number
-sum([], Acc) ->
-    Acc.
-
-
-%% Using the lists module
-%% Example: Product of all elements inside list
-%% Usage:
-%% MyProd = accumulator:prod([2,4,6,8]).
-%% MyProd is now 384
-
-prod(List) ->
-    Accumulator = 1, % Because it's a product, accumulator begins with 1
-    lists:foldl(fun(N, Acc) -> N * Acc end, Accumulator, List).
-</code></pre>
+The _accumulator_ has an exit condition that indicates when the
+accumulation is finished. In this case, the list is finished when
+`Start` is greater than or equal to `Finish`.
