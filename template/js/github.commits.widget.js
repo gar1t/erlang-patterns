@@ -75,7 +75,7 @@ THE SOFTWARE.
                     }
                     else
                     {
-                        e_user.append(cur.commit.committer.name);
+                        e_user.append(avatar3(cur.commit.committer, avatarSize));
                     }
 
                     li.append(e_user);
@@ -102,6 +102,14 @@ THE SOFTWARE.
                         .attr('title', author.login);
                 }
 
+                function avatar3(committer, size) {
+                    return $('<img>')
+                        .attr('class', 'github-avatar')
+                        .attr('src', 'https://assets-cdn.github.com/images/gravatars/gravatar-user-420.png')
+                        .attr('width', size)
+                        .attr('title', committer.name);
+                }
+                  
                 function author(login) {
                     return  $('<a>')
                         .attr("href", 'https://github.com/' + login)

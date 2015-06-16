@@ -9,4 +9,4 @@ serve: gen
 	cd site && python -m SimpleHTTPServer
 
 publish: gen
-	s3cmd sync -P --delete-removed site/* s3://www.erlangpatterns.org
+	s3cmd sync -P --no-mime-magic --delete-removed site/* s3://www.erlangpatterns.org

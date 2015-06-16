@@ -7,27 +7,30 @@
 <html>
   <head>
     <title>{{site.title}}</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <meta name="description" content="{{site.description}}" />
     <meta name="keywords" content="{{site.keywords}}" />
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-      <link rel="stylesheet" href="css/skel.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-desktop.css" />
-    </noscript>
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
   </head>
+
+
   <body>
     {% block header %}{% include "header.html" %}{% endblock %}
     {% block banner %}{% endblock %}
     {% block main %}{% endblock %}
     {% block footer %}{% include "footer.html" %}{% endblock %}
   </body>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-viewport.min.js"></script>
+  <script src="js/util.js"></script>
+  <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+  <script src="js/main.js"></script>
   {% block scripts %}{% endblock %}
+
 </html>

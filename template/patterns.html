@@ -10,11 +10,10 @@
   <div class="6u"><strong>Summary</strong></div>
 </div>
 {% for p in patterns|sort:'name' %}
-<div class="row pattern-row">
+<div class="row">
   <div class="3u"><a href="{{p|basename}}.html">{{ p.name }}</a></div>
   <div class="3u">{{ p.scope }}</div>
   <div class="6u">{{ p.summary|markdown_to_html }}</div>
 </div>
 {% endfor %}
-
 {% endblock %}
