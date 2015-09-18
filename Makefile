@@ -3,7 +3,7 @@ gen:
 	lpad-gen
 
 clean:
-	rm -rf site
+	rm -rf site/*
 
 serve: gen
 	cd site && python -m SimpleHTTPServer
