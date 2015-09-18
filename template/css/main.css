@@ -1297,6 +1297,10 @@ code {
     font-size: 80%;
 }
 
+pre {
+    margin-bottom: 1.4em;
+}
+
 /* Desktop + Tablet */
 
 @media screen and (min-width: 737px) {
