@@ -87,3 +87,16 @@ file_acc_lines(_In, _Cur, _Count, [Last|Rest]) ->
 
 strip_trailing_cr(Line) ->
     lists:sublist(Line, length(Line) - 1).
+
+%%===================================================================
+%% Code as Verbatim
+%%
+%% Erlang code samples might land with '{{' or '}}' which will
+%% be treated as template markup. This filter wraps code blocks
+%% with {% verbatim %}
+%%===================================================================
+
+code_as_verbatim(Html) ->
+    re:replace(
+      re:replace(Html, "<code ?", "{% verbatim %}<code ", [global]),
+      "</code>", "</code>{% endverbatim %}", [global]).
