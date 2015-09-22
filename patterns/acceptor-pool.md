@@ -26,6 +26,7 @@ make_workers(Queue, NumWorkers, N) ->
 The function that handles inbound packets may delegate to a worker:
 
 ```erlang
+{% verbatim %}
 handle_request(Socket, Host, Port, Bin, State) ->
   case queue:out(State#state.workers) of
     {{value, Worker}, Queue} ->
@@ -35,4 +36,5 @@ handle_request(Socket, Host, Port, Bin, State) ->
       % Drop the packet
       {noreply, State}
   end.
+{% endverbatim %}
 ```
