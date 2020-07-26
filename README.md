@@ -1,11 +1,16 @@
 # Erlang Patterns
 
-Please see [http://erlangpatterns.org](http://erlangpatterns.org) for
-the published site.
+Please note that
+[http://erlangpatterns.org](http://erlangpatterns.org) is no longer
+maintained. Don't look for actual Erlang patterns there - it's
+something else now.
 
-The site content is generated using
-[Lambda Pad](http://lambdapad.io). See **Building** below for more
-information on building the site.
+This repo should be migrated to use GitHub pages so it can be viewed
+as a proper website. The original site was generated with LambdaPad,
+which is also no longer maintained.
+
+If anyone wants to migrate this to GitHub pages, that would be
+extremely helpful!
 
 ## Contributing to the Patterns
 
@@ -26,33 +31,6 @@ administrator using the master branch of this repository.
 If you'd like to ask a question or raise an issue about a pattern,
 please use the project's
 [issue tracking system](https://github.com/gar1t/erlang-patterns/issues).
-
-## Building
-
-You don't have to build the project to contribute, however you must
-build it to preview your changes within the context of the whole site.
-
-Use the instructions below to build the site using LambdaPad.
-
-### Install Lambda Pad
-
-You need to first install Lambda Pad.
-
-```
-git clone https://github.com/gar1t/lambdapad.git
-cd lambdapad
-make
-```
-
-Add the Lambda Pad `bin` directory to you path.
-
-### Clone Your Fork of the Project
-
-```
-git clone https://github.com/YOUR-FORK
-cd erlang-patterns
-make
-```
 
 ## View the Presentation
 
